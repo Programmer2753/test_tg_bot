@@ -1,1 +1,25 @@
-
+[
+  {
+    "id": "g1",
+    "title": "Логотип для кафе 'BlackBean'",
+    "category": "Лого",
+    "image": "/images/blackbean.jpg",
+    "description": "Логотип + брендбук. Инструменты: Illustrator, Figma. Срок: 7 дней.",
+    "tools": [
+      "Adobe Illustrator",
+      "Figma"
+    ],
+    "time": "7 дней"
+  },
+  {
+    "id": "g2",
+    "title": "Постер для фестиваля",
+    "category": "Постеры",
+    "image": "/images/poster1.jpg",
+    "description": "Плакат в двух форматах. Инструменты: Photoshop. Срок: 3 дня.",
+    "tools": [
+      "Photoshop"
+    ],
+    "time": "3 дня"
+  }
+]
