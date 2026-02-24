@@ -1,0 +1,130 @@
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  RIVAL STUDIO — Global CSS Resets & Utilities           ║
+   ║  All component styles live inline in App.jsx            ║
+   ╚══════════════════════════════════════════════════════════╝ */
+
+/* ── RESET ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent body scrolling */
+  height: 100%;
+  background: #06060e;
+  color: #f0eaff;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Nunito", "Sora", "DM Sans", system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+/* ── SCROLLBARS ── */
+::-webkit-scrollbar { width: 0; height: 0; }
+* { scrollbar-width: none; }
+
+/* ── FOCUS ── */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── BUTTONS ── */
+button {
+  font-family: inherit;
+  line-height: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+}
+
+/* ── INPUTS ── */
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+}
+
+/* ── IMAGES ── */
+img {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ── SELECTIONS ── */
+::selection {
+  background: rgba(138, 92, 246, 0.3);
+  color: #f0eaff;
+}
+
+/* ── SWIPER ── */
+.swiper { overflow: visible !important; }
+.swiper-wrapper { align-items: flex-start; }
+
+/* ── RANGE INPUT ── */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+/* ── SAFE AREA ── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── PRINT ── */
+@media print {
+  nav, .splash, canvas, .drawer { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+}
